@@ -2,14 +2,17 @@ require './lib/bike'
 
 class DockingStation
 
-  attr_reader :bike
+  def initialize(bikes, capacity)
+    @bikes = []
+    @capacity = 10
+  end
 
   def release_bike
-    Bike.new
+    @bikes.pop
   end
 
   def dock(bike)
-    @bike = bike
+    @bikes << bike
   end
 
 end
