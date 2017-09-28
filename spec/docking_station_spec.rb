@@ -17,7 +17,8 @@ describe DockingStation do
   it 'can dock bikes' do
     bike = Bike.new
     station = DockingStation.new(0,10)
-    expect(station.dock(bike)).to eq @bikes
+    station.dock(bike)
+    expect(station.bikes).to include bike
   end
 
 end
