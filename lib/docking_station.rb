@@ -40,9 +40,18 @@ class DockingStation
   end
 
   def bike_count
-    @bikes.count
+    working_bikes = []
+    broken_bikes = []
+    @bikes.each { |bike| working_bikes << bike if bike.bike_is_working?}
+    @bikes.each { |bike| broken_bikes << bike if !bike.bike_is_working?}
+    s = 's'
+    s1 = 's'
+    if working_bikes.count == 1
+      s = ''
+    end
+    if broken_bikes.count == 1
+      s1 = ''
+    end
+    "#{working_bikes.count} working bike#{s}, #{broken_bikes.count} broken bike#{s1}"
   end
-
-
-
 end
