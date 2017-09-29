@@ -2,9 +2,11 @@ require './lib/bike'
 
 class DockingStation
 
-  def initialize(bikes, capacity)
+  DEFAULT_CAPACITY = 10
+
+  def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
-    @capacity = 10
+    @capacity = capacity
   end
 
   def bikes
@@ -17,6 +19,7 @@ class DockingStation
   end
 
   def dock(bike)
+    raise "No more space" if full?
     @bikes << bike
     return @bikes[-1]
   end
@@ -24,5 +27,11 @@ class DockingStation
   def empty?
     @bikes.count == 0
   end
+
+  def full?
+    @bikes.count >= DEFAULT_CAPACITY
+  end
+
+
 
 end
