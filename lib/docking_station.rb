@@ -39,6 +39,10 @@ class DockingStation
     @bikes.count >= DEFAULT_CAPACITY
   end
 
+  def bike_count
+    @bikes.count
+  end
+
 
 
 end

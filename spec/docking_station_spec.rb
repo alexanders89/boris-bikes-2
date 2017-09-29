@@ -39,7 +39,13 @@ describe DockingStation do
     bike.report_as_broken
     station.dock(bike)
     expect {station.release_bike}.to raise_error("No bikes available")
+  end
 
+  it 'will have a default capacity of 10 bikes' do
+    station = DockingStation.new
+    10.times do station.dock(Bike.new)
+    end
+    expect(station.bike_count).to eq 10
   end
 
 end
