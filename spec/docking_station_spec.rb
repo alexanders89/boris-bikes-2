@@ -28,7 +28,7 @@ describe DockingStation do
 
   it 'will not allow docking once it has reahced capacity' do
     station = DockingStation.new
-    10.times do station.dock(Bike.new)
+    10.times do station.dock(double :bike)
     end
     expect {station.dock(Bike.new)}.to raise_error("No more space")
   end
