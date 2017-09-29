@@ -8,11 +8,10 @@ describe DockingStation do
   end
 
   it 'only releases working bikes' do
-    bike = Bike.new
     station = DockingStation.new
-    station.dock(bike)
+    station.dock(Bike.new)
     released_bike = station.release_bike
-    expect(released_bike).to be_working
+    expect(released_bike.bike_is_working?).to eq true
   end
 
   it 'can dock bikes' do
@@ -32,6 +31,14 @@ describe DockingStation do
     10.times do station.dock(Bike.new)
     end
     expect {station.dock(Bike.new)}.to raise_error("No more space")
+  end
+
+  it 'will not release a broken bike' do
+    station = DockingStation.new
+    bike = Bike.new
+    bike.report_as_broken
+    station.dock(bike)
+    expect {station.release_bike}.to raise_error("No bikes available")
 
   end
 

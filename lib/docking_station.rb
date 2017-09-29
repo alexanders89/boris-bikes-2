@@ -15,6 +15,7 @@ class DockingStation
 
   def release_bike
     raise "No bikes available" if empty?
+    raise "No bikes available" if !working_bikes_available
     @bikes.pop
   end
 
@@ -22,6 +23,10 @@ class DockingStation
     raise "No more space" if full?
     @bikes << bike
     return @bikes[-1]
+  end
+
+  def working_bikes_available
+      @bikes.any? { |bike| bike.bike_is_working?}
   end
 
   def empty?
