@@ -65,15 +65,15 @@ class DockingStation
   #   puts ' -----------------------------'
   # end
 
-  def bike_count
-    s = 's'
-    s1 = 's'
-    if count_working_bikes == 1
-      s = ''
-    end
-    if count_broken_bikes == 1
-      s1 = ''
-    end
-    "#{count_working_bikes} working bike#{s}, #{count_broken_bikes} broken bike#{s1}"
-  end
+  # def bike_count
+  #   s = 's'
+  #   s1 = 's'
+  #   if count_working_bikes == 1
+  #     s = ''
+  #   end
+  #   if count_broken_bikes == 1
+  #     s1 = ''
+  #   end
+  #   "#{count_working_bikes} working bike#{s}, #{count_broken_bikes} broken bike#{s1}"
+  # end
 end
