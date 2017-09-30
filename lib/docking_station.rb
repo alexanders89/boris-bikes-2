@@ -51,6 +51,20 @@ class DockingStation
     broken_bikes.count
   end
 
+  def list_bikes
+    bike_id = []
+    @bikes.each { |bike| bike_id << bike.to_s}
+  end
+
+
+  # @var[/extract(.*?)container_end/, 1]
+
+
+  # def print_header
+  #   puts '    Bike ID   |   Working?    '
+  #   puts ' -----------------------------'
+  # end
+
   def bike_count
     s = 's'
     s1 = 's'
