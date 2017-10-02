@@ -3,7 +3,7 @@ require './lib/bike'
 
 class Van
 
-  DEFAULT_CAPACITY = 20
+  DEFAULT_CAPACITY = 5
 
   def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
@@ -20,7 +20,7 @@ class Van
 
   def collect_bikes(station)
     raise "No broken bikes in selected station" if station.broken_bikes.count == 0
-    @bikes = station.broken_bikes
+    @bikes = station.broken_bikes[0...DEFAULT_CAPACITY]
   end
 
 end
