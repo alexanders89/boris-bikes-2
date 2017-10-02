@@ -108,7 +108,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -201,9 +201,6 @@
         2,
         null,
         null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/alexsatur/Desktop/boris-bikes-2/lib/van.rb": [
@@ -228,7 +225,7 @@
         null,
         null,
         1,
-        1,
+        2,
         1,
         null,
         null,
@@ -242,6 +239,6 @@
         null
       ]
     },
-    "timestamp": 1506942261
+    "timestamp": 1506942401
   }
 }

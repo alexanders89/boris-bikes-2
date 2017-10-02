@@ -22,10 +22,7 @@ describe Van do
     van = Van.new
     station = DockingStation.new
     station.dock(Bike.new)
-    expect {van.collect_bikes}.to raise_error("No broken bikes in selected station")
-
-
-
+    expect {van.collect_bikes(station)}.to raise_error("No broken bikes in selected station")
   end
 
 end

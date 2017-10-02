@@ -19,8 +19,8 @@ class Van
   end
 
   def collect_bikes(station)
-    p @bikes = station.broken_bikes
-    p station.broken_bikes
+    raise "No broken bikes in selected station" if station.broken_bikes.count == 0
+    @bikes = station.broken_bikes
   end
 
 end
