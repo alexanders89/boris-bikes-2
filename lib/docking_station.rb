@@ -59,9 +59,10 @@ class DockingStation
     @bikes.each { |bike| bike_id << bike.to_s}
   end
 
-  def unload_broken_bikes
-    @broken_bikes.shift(5)
+  def unload_bikes(van)
+    @broken_bikes.clear
   end
+
 
 
   # @var[/extract(.*?)container_end/, 1]

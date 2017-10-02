@@ -15,13 +15,7 @@ class Van
   end
 
   def capacity
-    @capacity
-  end
-
-  def collect_bikes(station)
-    raise "No broken bikes in selected station" if station.broken_bikes.count == 0
-    @bikes = station.broken_bikes[0...DEFAULT_CAPACITY]
-    station.unload_broken_bikes
+    DEFAULT_CAPACITY - @bikes.count
   end
 
 end
