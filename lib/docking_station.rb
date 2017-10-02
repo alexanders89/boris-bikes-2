@@ -1,4 +1,5 @@
 require './lib/bike'
+require './lib/van'
 
 class DockingStation
 
@@ -56,6 +57,10 @@ class DockingStation
   def list_bikes
     bike_id = []
     @bikes.each { |bike| bike_id << bike.to_s}
+  end
+
+  def unload_broken_bikes
+    @broken_bikes.shift(5)
   end
 
 
