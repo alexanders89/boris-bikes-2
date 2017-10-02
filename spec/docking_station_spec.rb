@@ -17,9 +17,9 @@ describe DockingStation do
 
   it 'can dock bikes' do
     station = DockingStation.new
-    bike = double(:bike)
+    bike = double(:bike, bike_is_working?: true)
     station.dock(bike)
-    expect(station.bikes).to include bike
+    expect(station.working_bikes).to include bike
   end
 
   it 'will not release a bike if it is empty' do
@@ -29,7 +29,7 @@ describe DockingStation do
 
   it 'will not allow docking once it has reahced capacity' do
     station = DockingStation.new
-    10.times do station.dock(double :bike)
+    10.times do station.dock(double(:bike, bike_is_working?: true))
     end
     expect {station.dock(double :bike)}.to raise_error("No more space")
   end

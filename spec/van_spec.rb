@@ -15,6 +15,17 @@ describe Van do
     bike = Bike.new
     station.dock(bike.report_as_broken)
     van.collect_bikes(station)
-    expect(van.bikes).to eq van.bikes
+    expect(van.bikes[0]).to eq bike
   end
+
+  it 'will only accept broken bikes' do
+    van = Van.new
+    station = DockingStation.new
+    station.dock(Bike.new)
+    expect {van.collect_bikes}.to raise_error("No broken bikes in selected station")
+
+
+
+  end
+
 end

@@ -6,29 +6,31 @@ class DockingStation
 
   def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
+    @broken_bikes = []
     @capacity = capacity
   end
 
-  def bikes
+  def working_bikes
     @bikes
+  end
+
+  def broken_bikes
+    return @broken_bikes
   end
 
   def release_bike
     raise "No bikes available" if empty?
-    raise "No bikes available" if !working_bikes_available
-    working_bike = @bikes.detect { |bike| bike.bike_is_working?  }
-    @bikes.delete working_bike
-    working_bike
+    @bikes.pop
   end
 
   def dock(bike)
     raise "No more space" if full?
-    @bikes << bike
-    return @bikes[-1]
+    @broken_bikes << bike if bike.bike_is_working? == false
+    @bikes << bike if bike.bike_is_working? == true
   end
 
   def working_bikes_available
-      @bikes.any? { |bike| bike.bike_is_working?}
+      @bikes.count == 0
   end
 
   def empty?
@@ -36,7 +38,7 @@ class DockingStation
   end
 
   def full?
-    @bikes.count >= DEFAULT_CAPACITY
+    @bikes.count + @broken_bikes.count >= DEFAULT_CAPACITY
   end
 
   def count_working_bikes
@@ -65,15 +67,15 @@ class DockingStation
   #   puts ' -----------------------------'
   # end
 
-  # def bike_count
-  #   s = 's'
-  #   s1 = 's'
-  #   if count_working_bikes == 1
-  #     s = ''
-  #   end
-  #   if count_broken_bikes == 1
-  #     s1 = ''
-  #   end
-  #   "#{count_working_bikes} working bike#{s}, #{count_broken_bikes} broken bike#{s1}"
-  # end
+  def bike_count
+    s = 's'
+    s1 = 's'
+    if @bikes.count == 1
+      s = ''
+    end
+    if @broken_bikes.count == 1
+      s1 = ''
+    end
+    "#{@bikes.count} working bike#{s}, #{@broken_bikes.count} broken bike#{s1}"
+  end
 end

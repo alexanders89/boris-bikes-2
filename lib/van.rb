@@ -1,4 +1,5 @@
 require './lib/docking_station'
+require './lib/bike'
 
 class Van
 
@@ -18,8 +19,15 @@ class Van
   end
 
   def collect_bikes(station)
-    station.bikes.each { |bike| @bikes << bike if bike.bike_is_working?}
-    @bikes
+    p @bikes = station.broken_bikes
+    p station.broken_bikes
   end
 
+end
+
+station = DockingStation.new
+van = Van.new
+5.times do station.dock(Bike.new)
+end
+5.times do station.dock((Bike.new).report_as_broken)
 end
