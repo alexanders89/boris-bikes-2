@@ -61,14 +61,10 @@ context 'can interact with a repair van' do
   end
 end
 
-  # it 'can return the status of all bikes docked there' do
-  #   station = DockingStation.new
-  #   bike = double(:bike)
-  #   6.times do station.dock(bike)
-  #   end
-  #   bike = double(:bike, report_as_broken: true)
-  #   4.times do station.dock((bike).report_as_broken)
-  #   end
-  #   expect(station.bike_count).to eq "6 working bikes, 4 broken bikes"
-  # end
+  it 'can return the status of all bikes docked there' do
+    station = DockingStation.new
+    station.dock(double(:bike, bike_is_working?: true))
+    station.dock(double(:bike, bike_is_working?: false))
+    expect(station.bike_count).to eq "1 working bike, 1 broken bike"
+  end
 end

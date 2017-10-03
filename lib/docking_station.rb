@@ -73,15 +73,6 @@ class DockingStation
     van.capacity
   end
 
-
-  # @var[/extract(.*?)container_end/, 1]
-
-
-  # def print_header
-  #   puts '    Bike ID   |   Working?    '
-  #   puts ' -----------------------------'
-  # end
-
   def bike_count
     s = 's'
     s1 = 's'
