@@ -1,7 +1,7 @@
 # Boris Bikes 2
 
-## Object Orientated System
-A simple program that emulates a popular cycle hire scheme
+## Objective
+Build a fully tested program with 90%+ coverage to satisfy the following user stories;
 
 ## User Stories
 
@@ -59,3 +59,8 @@ So that I can manage broken bikes and not disappoint users,
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
 
 ```
+## My Approach
+
+This was a very simple exercise in TDD and OOD. I started with a simple bike class and its associated tests, before moving on to the docking station, vans and then garages.
+
+Steps I will be taking in the future to improve this repo will include refactoring the classes and finishing off the use of doubles in all tests.
