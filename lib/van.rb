@@ -1,5 +1,7 @@
 require './lib/docking_station'
 require './lib/bike'
+require './lib/garage'
+
 
 class Van
 
@@ -22,6 +24,17 @@ class Van
 
   def space_on_van
     DEFAULT_CAPACITY - @bikes.count
+  end
+
+  def deposit_bikes(garage)
+    p @bikes
+    until @bikes.count == 0
+      garage.broken_bikes << @bikes.pop
+      garage.broken_bikes.reverse
+  end
+  p garage.broken_bikes
+  p @bikes
+
   end
 
 end
