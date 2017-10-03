@@ -18,7 +18,7 @@ class DockingStation
   end
 
   def broken_bikes
-    return @broken_bikes
+    @broken_bikes
   end
 
   def release_bike
