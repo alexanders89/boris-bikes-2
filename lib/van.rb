@@ -5,6 +5,8 @@ class Van
 
   DEFAULT_CAPACITY = 5
 
+  attr_accessor :bikes
+
   def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
     @capacity = capacity

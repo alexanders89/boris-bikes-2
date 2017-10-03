@@ -5,6 +5,8 @@ class DockingStation
 
   DEFAULT_CAPACITY = 10
 
+  attr_accessor :bikes
+
   def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
     @broken_bikes = []
@@ -60,7 +62,12 @@ class DockingStation
   end
 
   def unload_bikes(van)
-    @broken_bikes.clear
+    bikes_to_unload = []
+    @broken_bikes.each do |bike|
+      bikes_to_unload << bike if !bike.bike_is_working?
+    end
+    van.bikes = bikes_to_unload
+    self.broken_bikes.clear
   end
 
 
