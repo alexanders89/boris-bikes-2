@@ -1,3 +1,5 @@
+require './lib/bike'
+
 class Garage
 
   DEFAULT_CAPACITY = 50
@@ -16,9 +18,16 @@ class Garage
     @fixed_bikes
   end
 
-
   def recieve_bike(bike)
     @broken_bikes << bike
+  end
+
+  def fix_bikes
+    @broken_bikes.each do |bike|
+      bike.repair_bike
+      @fixed_bikes << bike
+    end
+    @broken_bikes.clear
   end
 
 end

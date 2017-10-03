@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-03T14:42:26+01:00">2017-10-03T14:42:26+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-03T15:11:57+01:00">2017-10-03T15:11:57+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.53%</span></span>
+    (<span class="covered_percent"><span class="green">95.45%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.38
+         3.72
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>201</b> relevant lines. 
-    <span class="green"><b>190</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed </span>
+    <b>220</b> relevant lines. 
+    <span class="green"><b>210</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#4ddca9ad93cd5aee490b95094b3ef86e1998a2a4" class="src_link" title="lib/bike.rb">lib/bike.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>9</td>
-        <td>9</td>
+        <td>21</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>10.8</td>
+        <td>11.6</td>
       </tr>
       
       <tr>
@@ -67,17 +67,17 @@
         <td>52</td>
         <td>42</td>
         <td>10</td>
-        <td>4.9</td>
+        <td>5.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#824820b462f3a137654ce5d4799048bada6a8c3b" class="src_link" title="lib/garage.rb">lib/garage.rb</a></td>
-        <td class="green strong">91.67 %</td>
-        <td>24</td>
-        <td>12</td>
-        <td>11</td>
-        <td>1</td>
-        <td>3.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>36</td>
+        <td>20</td>
+        <td>20</td>
+        <td>0</td>
+        <td>3.7</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>7.7</td>
+        <td>9.4</td>
       </tr>
       
       <tr>
@@ -113,9 +113,9 @@
       <tr>
         <td class="strong"><a href="#8e9c9172b3e264aacdc67b500e2b819e6e484bea" class="src_link" title="spec/garage_spec.rb">spec/garage_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>39</td>
-        <td>20</td>
-        <td>20</td>
+        <td>47</td>
+        <td>29</td>
+        <td>29</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -151,8 +151,8 @@
     <h3>lib/bike.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -190,8 +190,8 @@
           <code class="ruby">  def initialize(broken = false)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="6">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="18" data-linenumber="6">
+          <span class="hits">18</span>
           
           <code class="ruby">    @broken = broken</code>
         </li>
@@ -214,8 +214,8 @@
           <code class="ruby">  def bike_is_working?</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="10">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="49" data-linenumber="10">
+          <span class="hits">49</span>
           
           <code class="ruby">    !@broken</code>
         </li>
@@ -238,14 +238,14 @@
           <code class="ruby">  def report_as_broken</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="14">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="25" data-linenumber="14">
+          <span class="hits">25</span>
           
           <code class="ruby">    @broken = true</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="15">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="25" data-linenumber="15">
+          <span class="hits">25</span>
           
           <code class="ruby">    self</code>
         </li>
@@ -257,6 +257,30 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def repair_bike</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="19">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @broken = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -341,20 +365,20 @@
           <code class="ruby">  def initialize(capacity = DEFAULT_CAPACITY)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="11">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="11">
+          <span class="hits">15</span>
           
           <code class="ruby">    @bikes = []</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="12">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="12">
+          <span class="hits">15</span>
           
           <code class="ruby">    @broken_bikes = []</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="13">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="13">
+          <span class="hits">15</span>
           
           <code class="ruby">    @capacity = capacity</code>
         </li>
@@ -455,20 +479,20 @@
           <code class="ruby">  def dock(bike)</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="30">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="40" data-linenumber="30">
+          <span class="hits">40</span>
           
           <code class="ruby">    raise &quot;No more space&quot; if full?</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="31">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="39" data-linenumber="31">
+          <span class="hits">39</span>
           
           <code class="ruby">    @broken_bikes &lt;&lt; bike if bike.bike_is_working? == false</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="32">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="39" data-linenumber="32">
+          <span class="hits">39</span>
           
           <code class="ruby">    @bikes &lt;&lt; bike if bike.bike_is_working? == true</code>
         </li>
@@ -539,8 +563,8 @@
           <code class="ruby">  def full?</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="44">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="40" data-linenumber="44">
+          <span class="hits">40</span>
           
           <code class="ruby">    @bikes.count + @broken_bikes.count &gt;= DEFAULT_CAPACITY</code>
         </li>
@@ -665,20 +689,20 @@
           <code class="ruby">  def unload_bikes(van)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="65">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="65">
+          <span class="hits">7</span>
           
           <code class="ruby">    raise &quot;Not enough space on van&quot; if @broken_bikes.count &gt; van.space_on_van</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="66">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="66">
+          <span class="hits">6</span>
           
           <code class="ruby">    until van.bikes.count == van.capacity</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="67">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="30" data-linenumber="67">
+          <span class="hits">30</span>
           
           <code class="ruby">      van.bikes &lt;&lt; @broken_bikes.pop</code>
         </li>
@@ -689,8 +713,8 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="69">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="69">
+          <span class="hits">6</span>
           
           <code class="ruby">    van.bikes.reverse</code>
         </li>
@@ -811,11 +835,11 @@
         <div class="source_table" id="824820b462f3a137654ce5d4799048bada6a8c3b">
   <div class="header">
     <h3>lib/garage.rb</h3>
-    <h4><span class="green">91.67 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -825,7 +849,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Garage</code>
+          <code class="ruby">require &#39;./lib/bike&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -837,7 +861,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  DEFAULT_CAPACITY = 50</code>
+          <code class="ruby">class Garage</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -849,118 +873,190 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(capacity = DEFAULT_CAPACITY)</code>
+          <code class="ruby">  DEFAULT_CAPACITY = 50</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    @broken_bikes = []</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    @fixed_bikes = []</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    @capacity = capacity</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(capacity = DEFAULT_CAPACITY)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @broken_bikes = []</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @fixed_bikes = []</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @capacity = capacity</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def broken_bikes</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="12">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="33" data-linenumber="14">
+          <span class="hits">33</span>
           
           <code class="ruby">    @broken_bikes</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def fixed_bikes</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
           
           <code class="ruby">    @fixed_bikes</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="20">
           
-          <code class="ruby">  def recieve_bike(bike)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    @broken_bikes &lt;&lt; bike</code>
+          <code class="ruby">  def recieve_bike(bike)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @broken_bikes &lt;&lt; bike</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fix_bikes</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @broken_bikes.each do |bike|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="27">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      bike.repair_bike</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="28">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      @fixed_bikes &lt;&lt; bike</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @broken_bikes.clear</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    p broken_bikes</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    p fixed_bikes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">end</code>
@@ -1057,14 +1153,14 @@
           <code class="ruby">  def initialize(capacity = DEFAULT_CAPACITY)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="13">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="13">
+          <span class="hits">8</span>
           
           <code class="ruby">    @bikes = []</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="14">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="14">
+          <span class="hits">8</span>
           
           <code class="ruby">    @capacity = capacity</code>
         </li>
@@ -1087,8 +1183,8 @@
           <code class="ruby">  def bikes</code>
         </li>
       
-        <li class="covered" data-hits="63" data-linenumber="18">
-          <span class="hits">63</span>
+        <li class="covered" data-hits="75" data-linenumber="18">
+          <span class="hits">75</span>
           
           <code class="ruby">    @bikes</code>
         </li>
@@ -1111,8 +1207,8 @@
           <code class="ruby">  def capacity</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="22">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="37" data-linenumber="22">
+          <span class="hits">37</span>
           
           <code class="ruby">    DEFAULT_CAPACITY</code>
         </li>
@@ -1135,8 +1231,8 @@
           <code class="ruby">  def space_on_van</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="26">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="26">
+          <span class="hits">7</span>
           
           <code class="ruby">    DEFAULT_CAPACITY - @bikes.count</code>
         </li>
@@ -1159,20 +1255,20 @@
           <code class="ruby">  def deposit_bikes(garage)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="30">
+          <span class="hits">3</span>
           
           <code class="ruby">    until @bikes.count == 0</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="31">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="15" data-linenumber="31">
+          <span class="hits">15</span>
           
           <code class="ruby">      garage.broken_bikes &lt;&lt; @bikes.pop</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="32">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="15" data-linenumber="32">
+          <span class="hits">15</span>
           
           <code class="ruby">      garage.broken_bikes.reverse</code>
         </li>
@@ -1783,8 +1879,8 @@
     <h3>spec/garage_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>29</b> relevant lines. 
+      <span class="green"><b>29</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1972,55 +2068,103 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  it &#39;can fix bikes&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # it &#39;can fix bikes&#39; do</code>
+          <code class="ruby">    garage = Garage.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   garage = Garage.new</code>
+          <code class="ruby">    station = DockingStation.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   bike = (Bike.new).report_as_broken</code>
+          <code class="ruby">    van = Van.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="6" data-linenumber="35">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">  #   garage.repair_bike(bike)</code>
+          <code class="ruby">    5.times do station.dock((Bike.new).report_as_broken)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  #   expect(bike.bike_is_working?).to eq true</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # end</code>
+          <code class="ruby">    station.unload_bikes(van)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    van.deposit_bikes(garage)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    garage.fix_bikes</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(garage.fixed_bikes.count).to eq 5</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">end</code>
@@ -2342,7 +2486,7 @@
         <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(van.bikes.count).to eq 1</code>
+          <code class="ruby">    expect(van.bikes.count).to eq 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">

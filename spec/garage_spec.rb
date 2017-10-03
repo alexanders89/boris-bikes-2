@@ -28,12 +28,20 @@ describe Garage do
     expect(garage.broken_bikes.count).to eq 5
   end
 
+  it 'can fix bikes' do
+    garage = Garage.new
+    station = DockingStation.new
+    van = Van.new
+    5.times do station.dock((Bike.new).report_as_broken)
+    end
+    station.unload_bikes(van)
+    van.deposit_bikes(garage)
+    garage.fix_bikes
+    expect(garage.fixed_bikes.count).to eq 5
 
-  # it 'can fix bikes' do
-  #   garage = Garage.new
-  #   bike = (Bike.new).report_as_broken
-  #   garage.repair_bike(bike)
-  #   expect(bike.bike_is_working?).to eq true
-  # end
+
+  end
+
+
 end
 end
