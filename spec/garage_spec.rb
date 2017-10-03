@@ -38,8 +38,7 @@ describe Garage do
     van.deposit_bikes(garage)
     garage.fix_bikes
     expect(garage.fixed_bikes.count).to eq 5
-
-
+    expect(garage.broken_bikes.count).to eq 0
   end
 
 
