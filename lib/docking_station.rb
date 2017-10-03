@@ -62,14 +62,16 @@ class DockingStation
   end
 
   def unload_bikes(van)
-    bikes_to_unload = []
-    @broken_bikes.each do |bike|
-      bikes_to_unload << bike if !bike.bike_is_working?
-    end
-    van.bikes = bikes_to_unload
-    self.broken_bikes.clear
+    raise "Not enough space on van" if @broken_bikes.count > van.space_on_van
+    until van.bikes.count == van.capacity
+      van.bikes << @broken_bikes.pop
+  end
+    van.bikes.reverse
   end
 
+  def van_capacity(van)
+    van.capacity
+  end
 
 
   # @var[/extract(.*?)container_end/, 1]

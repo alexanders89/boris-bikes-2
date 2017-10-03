@@ -17,6 +17,10 @@ class Van
   end
 
   def capacity
+    DEFAULT_CAPACITY
+  end
+
+  def space_on_van
     DEFAULT_CAPACITY - @bikes.count
   end
 
