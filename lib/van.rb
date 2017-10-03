@@ -27,14 +27,10 @@ class Van
   end
 
   def deposit_bikes(garage)
-    p @bikes
     until @bikes.count == 0
       garage.broken_bikes << @bikes.pop
       garage.broken_bikes.reverse
-  end
-  p garage.broken_bikes
-  p @bikes
-
+    end
   end
 
 end

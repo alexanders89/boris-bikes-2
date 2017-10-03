@@ -1,6 +1,8 @@
 require './lib/van'
 require './lib/docking_station'
 require './lib/bike'
+require './lib/garage'
+
 
 describe Van do
 
@@ -35,6 +37,21 @@ describe Van do
     van = Van.new
     expect { station.unload_bikes(van) }.to raise_error("Not enough space on van")
   end
+
+  it 'clears all broken bikes to the garage' do
+    station = DockingStation.new
+    bike = Bike.new
+    5.times do station.dock(bike.report_as_broken)
+    end
+    van = Van.new
+    station.unload_bikes(van)
+    garage = Garage.new
+    van.deposit_bikes(garage)
+    expect(van.bikes.count).to eq 0
+  end
+
+
+
 
 
 end
